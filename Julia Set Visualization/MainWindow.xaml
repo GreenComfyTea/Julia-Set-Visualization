@@ -1,0 +1,72 @@
+﻿<Window x:Class="JuliaSetVisualization.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuliaSetVisualization"
+        mc:Ignorable="d"
+        Title="Julia Set Visualization" Width="1280" Height="720" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+
+		<Canvas x:Name="canvas" MouseDown="MousePressed" MouseUp="MouseReleased" MouseMove="MouseMoved">
+			<Image x:Name="canvasImage"  />
+		</Canvas>
+
+		<Grid Grid.Row="1">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+
+            <Frame Background="LightGray" Grid.RowSpan="2" Grid.ColumnSpan="16" />
+
+            <Label Content="Iteration count"	Grid.Column="0"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <TextBox x:Name="iterationCountTextBox"	Grid.Column="1"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" Text="128" />
+
+            <Label Content="Real"	Grid.Column="2"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <TextBox x:Name="realTextBox"	Grid.Column="3"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+
+            <Label Content="Imaginary"	Grid.Column="4"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <TextBox x:Name="imaginaryTextBox"	Grid.Column="5"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" />
+
+            <Button x:Name="StartButton"	Content="Start"	Grid.Column="6"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="20, 0, 20, 0" Click="Start" />
+
+            <Label Content="X min"	Grid.Column="7"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <Label Content="X max"	Grid.Column="9"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <Label Content="Y min"	Grid.Column="11"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+            <Label Content="Y max"	Grid.Column="13"	HorizontalAlignment="Left"	VerticalAlignment="Center" />
+
+			<TextBox x:Name="xMinTextBox"	Grid.Column="8"     HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" Text="" />
+			<TextBox x:Name="xMaxTextBox"	Grid.Column="10"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" Text="" />
+			<TextBox x:Name="yMinTextBox"	Grid.Column="12"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" Text="" />
+			<TextBox x:Name="yMaxTextBox"	Grid.Column="14"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" Text=""/>
+
+			<Button x:Name="StartWithBoundsButton"	Content="Start with Bounds"	Grid.Column="15"	HorizontalAlignment="Stretch"	VerticalAlignment="Center"	Margin="5, 0, 5, 0"	Padding="20, 0, 20, 0" Click="StartWithBounds" />
+
+			<TextBox x:Name="ConsoleBox"	Grid.Row="2"	Grid.ColumnSpan="16"	HorizontalAlignment="Stretch"	VerticalAlignment="Stretch"	Margin="5, 5, 5, 5" IsReadOnly="True" />
+		</Grid>
+	</Grid>
+</Window>
