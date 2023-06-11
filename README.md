@@ -1,7 +1,5 @@
-<h1>Julia Set Visualization</h1>
-
 <p align="center">
-	<h2 align="center"><b>Image Processing</b></h2>
+	<h2 align="center"><b>Julia Set Visualization</b></h2>
 </p>
 
 <p align="center">
